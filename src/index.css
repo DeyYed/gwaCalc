@@ -50,6 +50,16 @@
 }
 
 @layer utilities {
+  /* Make interactive elements obviously clickable */
+  .clickable { cursor: pointer; }
+  button:not(:disabled),
+  [role="button"],
+  a[href] { cursor: pointer; }
+  button:disabled { cursor: not-allowed; opacity: .7; }
+
+  /* Subtle focus ring for accessibility */
+  .focus-ring:focus-visible { outline: 2px solid color-mix(in oklab, var(--c1) 60%, transparent); outline-offset: 2px; }
+
   /* Hide scrollbar for webkit browsers while keeping scroll */
   .no-scrollbar::-webkit-scrollbar { display: none; }
   .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
@@ -57,6 +67,7 @@
   /* Primary button using theme variable */
   .btn-primary { background: var(--primary); color: #fff; }
   .btn-primary:hover { filter: brightness(1.1); }
+  .btn-primary:disabled { filter: grayscale(40%); }
 
   /* Keyframes */
   @keyframes bgpulse {
