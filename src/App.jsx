@@ -833,7 +833,7 @@ export default function App() {
                 Compute your General Weighted Average fast.
               </h2>
               <p className="text-slate-300/80 text-base sm:text-lg max-w-prose">
-                Add your subjects, pick grades and units—get your GWA instantly.
+                Add your subjects, pick grades and units then get your GWA instantly.
               </p>
               <div className="flex flex-wrap gap-3">
                 <a href="#calc" className="inline-flex items-center gap-2 rounded-lg btn-primary transition px-4 py-2 shadow-lg" style={{ boxShadow: '0 10px 20px -10px var(--primary)' }}>
