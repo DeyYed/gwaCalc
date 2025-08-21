@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1200" height="800" fill="url(#bg)"/>
+  <g transform="translate(60,60)">
+    <text x="0" y="0" fill="#e5e7eb" font-family="Helvetica, Arial, sans-serif" font-size="36" font-weight="700">OCR Sample — Focus on Units and Equivalent Grade</text>
+    <text x="0" y="44" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="18">Tips: crop tightly, keep text horizontal, high contrast, avoid glare, ensure readable two-decimal grades (e.g., 1.00, 1.25).</text>
+    
+    <!-- Sample table frame -->
+    <g transform="translate(0,90)">
+      <rect x="0" y="0" width="1080" height="540" rx="12" fill="#0b1220" stroke="#1f2937" stroke-width="2"/>
+      
+      <!-- Header -->
+      <rect x="20" y="20" width="1040" height="56" rx="8" fill="#334155"/>
+      <text x="60" y="58" fill="#f8fafc" font-size="20" font-family="Helvetica, Arial, sans-serif" font-weight="700">Units</text>
+      <text x="240" y="58" fill="#94a3b8" font-size="18" font-family="Helvetica, Arial, sans-serif">Section</text>
+      <text x="520" y="58" fill="#94a3b8" font-size="18" font-family="Helvetica, Arial, sans-serif">Final Average</text>
+      <text x="840" y="58" fill="#f8fafc" font-size="20" font-family="Helvetica, Arial, sans-serif" font-weight="700">Equivalent Grade</text>
+      
+      <!-- Rows -->
+      <g font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#e5e7eb">
+        <rect x="20" y="96" width="1040" height="56" rx="6" fill="#111827"/>
+        <text x="60" y="132">3</text>
+        <text x="240" y="132" fill="#94a3b8">CS 101</text>
+        <text x="520" y="132" fill="#94a3b8">89</text>
+        <text x="840" y="132">1.25</text>
+        
+        <rect x="20" y="160" width="1040" height="56" rx="6" fill="#0f172a"/>
+        <text x="60" y="196">3</text>
+        <text x="240" y="196" fill="#94a3b8">MATH 1</text>
+        <text x="520" y="196" fill="#94a3b8">92</text>
+        <text x="840" y="196">1.00</text>
+        
+        <rect x="20" y="224" width="1040" height="56" rx="6" fill="#111827"/>
+        <text x="60" y="260">2</text>
+        <text x="240" y="260" fill="#94a3b8">PE</text>
+        <text x="520" y="260" fill="#94a3b8">85</text>
+        <text x="840" y="260">2.00</text>
+      </g>
+    </g>
+    
+    <!-- Notes -->
+    <g transform="translate(0,680)" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#cbd5e1">
+      <text x="0" y="0">• Make sure the headers “Units” and “Equivalent Grade” are visible.</text>
+      <text x="0" y="28">• Two-decimal grades (e.g., 1.00, 1.25) help the OCR target the right column.</text>
+      <text x="0" y="56">• Double-check extracted values. OCR isn’t perfect.</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+/* Tailwind V4: add any custom layers below */
+@layer base {
+  :root {
+    --c1: #6366f1; /* indigo */
+    --c2: #a855f7; /* fuchsia */
+    --c3: #06b6d4; /* cyan */
+    --primary: #6366f1;
+    --bg: #0b1220;
+    --text: #e5e7eb;
+  /* animation durations (default) */
+  --pulse: 10s;
+  --float1: 12s;
+  --float2: 10s;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    overflow-x: hidden;
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background-color 200ms ease, color 200ms ease;
+  }
+
+  /* Themes */
+  [data-theme="psu"] {
+    /* Pampanga State University: orange, yellow, white */
+    --c1: #f97316; /* orange-500 */
+    --c2: #fbbf24; /* amber-400 */
+    --c3: #ffffff; /* white */
+    --primary: #f59e0b; /* amber-500 */
+    --bg: #0b0b0b; /* deep dark */
+    --text: #ffffff;
+  --pulse: 7s;
+  --float1: 9s;
+  --float2: 7.5s;
+  }
+  [data-theme="hau"] {
+    /* Holy Angel University: maroon, white, yellow-brownish, black */
+    --c1: #800000; /* maroon */
+    --c2: #c49a6c; /* yellow-brownish */
+    --c3: #ffffff; /* white */
+    --primary: #800000; /* maroon */
+    --bg: #000000; /* black */
+    --text: #ffffff;
+  --pulse: 14s;
+  --float1: 16s;
+  --float2: 13s;
+  }
+}
+
+@layer utilities {
+  /* Hide scrollbar for webkit browsers while keeping scroll */
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+  /* Primary button using theme variable */
+  .btn-primary { background: var(--primary); color: #fff; }
+  .btn-primary:hover { filter: brightness(1.1); }
+
+  /* Keyframes */
+  @keyframes bgpulse {
+    0%,100% { opacity: .8; transform: translateY(0); }
+    50% { opacity: 1; transform: translateY(-8px); }
+  }
+  @keyframes floatY1 {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-16px); }
+  }
+  @keyframes floatY2 {
+    0%,100% { transform: translate(0,0) rotate(0deg); }
+    50% { transform: translate(0,-22px) rotate(3deg); }
+  }
+
+  /* Animation helpers using theme-controlled durations */
+  .anim-bgpulse { animation: bgpulse var(--pulse) ease-in-out infinite; }
+  .anim-float1 { animation: floatY1 var(--float1) ease-in-out infinite; }
+  .anim-float2 { animation: floatY2 var(--float2) ease-in-out infinite; }
+}
